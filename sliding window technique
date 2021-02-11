@@ -1,0 +1,70 @@
+/*
+       //sliding window technique//
+ 
+--the thing is we have an array and given a integer value k
+we find the maximum sum of length k segment in array..
+
+we can do this using 2 technique:
+1.brute force approach
+2.sliding window approach 
+
+
+       //brute force approach//
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long 
+int main()
+{
+	ll n,k; cin>>n>>K;
+	ll a[n];
+	for(ll i=0; i<n ; i++) cin>>a[i];
+    ll ans=0;
+    for(ll i=0; i<n-k ; i++)
+    {
+       ll sum=0;
+	   for(ll j=i ; j<i+k ; j++)
+	   {
+	      sum+=a[j];
+	   }
+	   ans=max(ans,sum);
+    }
+    cout<<ans<<endl;
+}
+time complexity O(n*n);
+
+     //sliding window approach//
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long 
+int main()
+{
+	ll n,k; cin>>n>>k;
+	ll a[n];
+	for(ll i=0; i<n ; i++) cin>>a[i];
+    ll ans=0;
+    for(ll i=0; i<k ; i++) ans+=a[i];
+    ll sum=0;
+    int left=0,right=k-1;
+    for(ll i=0; i<n-k; i++)
+    {
+	    ans-=a[left];
+	    ans+=a[right];
+	    left++;
+	    right++;
+	    ans=max(ans,sum);
+    }
+    cout<<ans<<endl;
+}
+sliding window technique means we just decrease a left value
+and add a right value in the sum..thus we modify our time
+complexity...segment e amra always left e ek ek kore bariye jai 
+so overall kahini kintu amra just left ekta komabo ar right 
+ekta barabo tahole e hocce 
+
+for better understanding:https://i.stack.imgur.com/2Dneo.png
+
+time complexity O(n+k);
+*/
+//Author: Mehedi.cm
+//Created: 11 February 2021 (Thursday) at 15:22
