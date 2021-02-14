@@ -1,6 +1,8 @@
 
 // ///// QUEUE  //////
-// QUEUE rule::-(first in first out)
+//Theory:-A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO). 
+A good example of a queue is any queue of consumers for a resource where the consumer that came first is served first. The difference between stacks and queues is in removing. 
+In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added.
 // Operations On A Queue
 // Enqueue- adding an element in the queue if there is space in the queue.
 // Dequeue- Removing elements from a queue if there are any elements in the queue
