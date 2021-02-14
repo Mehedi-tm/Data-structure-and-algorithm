@@ -1,0 +1,67 @@
+
+// ///// QUEUE  //////
+// QUEUE rule::-(first in first out)
+// Operations On A Queue
+// Enqueue- adding an element in the queue if there is space in the queue.
+// Dequeue- Removing elements from a queue if there are any elements in the queue
+// Front- get the first item from the queue.
+// Rear- get the last item from the queue.
+// isEmpty/isFull- checks if the queue is empty or full.
+#include<stdio.h>
+#include<stdbool.h>
+#define capacity 5
+int ourQueue[capacity];
+int front = 0, rear = -1, totalitem = 0;
+bool isFull()
+{
+	if (totalitem == capacity) {
+		return true;
+	}
+	return false;
+}
+bool isEmpty()
+{
+	if (totalitem == 0) {
+		return true;
+	}
+	return false;
+}
+void enqueue(int item)
+{
+	if (isFull())
+	{
+		printf("the queue is full\n");
+		return;
+	}
+	rear = (rear + 1) % capacity;
+	ourQueue[rear] = item;
+	totalitem++;
+}
+void dequeue()
+{
+	if (isEmpty())
+	{
+		printf("the output is empty\n");
+		return -1;
+	}
+	ourQueue[front] = -1;
+	front = (front + 1) % capacity;
+	totalitem--;
+}
+void printQueue()
+{
+	for (int i = 0; i < capacity; i++) printf("%d ", ourQueue[i]);
+	printf("\n");
+}
+int main()
+{
+	enqueue(10);
+	enqueue(20);
+	enqueue(30);
+	printQueue();
+	dequeue();
+	enqueue(40);
+	enqueue(50);
+}
+//Author:_mehedi_
+//Created: 14 February 2021 (Sunday) at 16:35
