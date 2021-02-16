@@ -1,5 +1,5 @@
 theory:-stack is a linear data structure which follows a particular order in which the operations are performed..the order called lifo(last in first out).
-stack one kind of boi er ectup er moto..boi er ectup e jokhn amra ektar upore ekta boi sajiye rakhi temon e stack er khetre amra jokhn element gula rakhbo oi gula ektar upore ekta
+stack one kind of boi ee tak er moto..boi er tak e jokhn amra ektar upore ekta boi sajiye rakhi temon e stack er khetre amra jokhn element gula rakhbo oi gula ektar upore ekta
 sajano thakbe..stack e jokhn e notun kono element access korbo tokhn eta ekdom top e thakbe..amra jodi stack theke kono element delete korte chai tahole ekdom top theke delete 
 korte hobe.top chara stack theke kono value delete kora jai na ..
 stack e 3 dhoroner operation possible:-
